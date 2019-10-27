@@ -67,7 +67,7 @@ public class ControleAluno extends HttpServlet {
             if (operacao != null && !operacao.isEmpty()) {
                 switch (operacao) {
                     case "Inserir":
-                        out.println("Operação inserir");
+
                         Aluno aluno = new Aluno();
                         aluno.codAluno = codAluno;
                         aluno.nomeAluno = nomeAluno;
@@ -100,11 +100,15 @@ public class ControleAluno extends HttpServlet {
                         break;
 
                     case "Excluir":
-                        out.println("Operação Excluir");
+
+                        Hashtable<Integer, Aluno> tabelaExcluir = null;
+                        tabelaExcluir = (Hashtable<Integer, Aluno>) getServletContext().getAttribute("tabela");
+                        tabelaExcluir.remove(codAluno);
+                        redirecionadorPaginaInicial.forward(request, response);
                         break;
 
                     case "Cancelar":
-                        out.println("Operação Cancelar");
+                        redirecionadorPaginaInicial.forward(request, response);
                         break;
 
                 }
