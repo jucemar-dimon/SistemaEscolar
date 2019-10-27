@@ -6,6 +6,10 @@ package modelo;
  */
 
 public class Aluno {
+
+   
+   
+    
     public String nomeAluno=null;
     public Integer codAluno=null;
     public Float avaliacao1=null;

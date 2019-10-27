@@ -13,7 +13,7 @@
     </head>
     <body>
         <h1>Excusão de dados</h1>
-         <form name="formCadastro" action="CadastroAlunoInserir.jsp" method="POST">
+         <form name="formCadastro" action="ControleAluno" method="POST">
                <form name="formCadastro" action="CadastroAlunoInserir.jsp" method="POST">
             <label>Código do Aluno</label>
             <input type="text" name="txtCodigoAluno" value="" />
