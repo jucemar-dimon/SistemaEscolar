@@ -13,17 +13,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!-- Fontawesome -->
         <script src="https://kit.fontawesome.com/37771f91aa.js" crossorigin="anonymous"></script>
-
         <!-- CSS -->
         <link href="estilos.css" rel="stylesheet" type="text/css"/>
-
         <title>Sistema Escolar</title>
     </head>
     <body>
@@ -41,39 +37,43 @@
         </header>
 
 
+
         <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">Home</li>
+                </ol>
+            </nav>
 
             <div class="jumbotron p-3">
                 <section>
                     <article>
                         <header>
-                            <h5>Cadastro de alunos</h5>
+                            <h5>Cadastro de alunos <small class="text-muted">Inclusão</small></h5>
                             <hr class="my-1 mb-3">
                         </header>
                         <form  name="formCadastro" action="ControleAluno" method="POST">
                             <div class="form-row">
-                                <div class="col-md-1">
+                                <div class="col-md-1 form-group ">
                                     <label>Código</label>
                                     <input   class="form-control" type="text" name="txtCodigoAluno" value="" />
                                 </div>
-                                <div class="col-md-6 ">
+                                <div class="col-md-6  form-group ">
                                     <label>Nome</label>
                                     <input class="form-control" type="text" name="txtNomeAluno" value="" />
                                 </div>
 
-                                <div class="col-md-2">
+                                <div class="col-md-2 form-group ">
                                     <label>Avaliação 01</label>
                                     <input class="form-control" type="text" name="txtAvaliacao1" value="" />
                                 </div>
 
-                                <div class="col-md-2">
+                                <div class="col-md-2 form-group ">
                                     <label>Avaliação 02</label>
                                     <input class="form-control" type="text" name="txtAvaliacao2" value="" />
                                 </div>   
-                                <div class="col-md-1 ">
-                                    <label>&nbsp</label>
-                                    <label>&nbsp</label>
-                                    <input class="btn btn-primary" type="submit" value="Inserir" name="btnOperacao" />  
+                                <div class="col-md-1 form-group  mt-4">                                
+                                    <input class="btn btn-primary mt-2 form-control" type="submit" value="Inserir" name="btnOperacao" />  
                                 </div>
                             </div>
                         </form>
